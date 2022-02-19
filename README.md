@@ -1,4 +1,4 @@
-# 研招网考研成绩自动查询
+# 考研成绩自动化快速查询 - 研招网接口 - 基于Python+selenium+ddddocr
 基于Python+selenium+ddddocr 通过一些自动化测试技术 能实现研招网考研成绩提前查询  
 源代码即main.py
 需要安装selenium、ddddocr库
