@@ -1,5 +1,7 @@
 #目前这是个半成品 访问量小情况下可用 验证码问题有待解决
 #目前懒得弄验证码 稍后我用ddddOCR搞一搞就能用了
+#今年研究生没考上，所以今年不打算继续完善了，明年我再完善。
+#大家也可以帮我完善...
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
