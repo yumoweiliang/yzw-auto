@@ -70,8 +70,6 @@ def python_program():  # 保证出现问题后循环执行 如遇到问题程序
 
         time.sleep(3)
 
-        element = wd.find_element(By.CSS_SELECTOR, '#app > div')
-
         element2 = wd.find_element(By.TAG_NAME, 'body').text
         if ('无查询结果' not in element2):
             print(element2)
