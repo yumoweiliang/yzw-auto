@@ -72,12 +72,13 @@ def python_program():  # 保证出现问题后循环执行 如遇到问题程序
 
         element = wd.find_element(By.CSS_SELECTOR, '#app > div')
 
-        if element.get_attribute('outerHTML') != r'<div class="zx-no-answer">无查询结果<br> <span class="cjcx-noresult">请检查您报考的招生单位是否已开通初试成绩查询功能</span></div>':
-            time.sleep(5)   #等待页面刷新
-            print(element.get_attribute('outerHTML'))   #若网页变化自动将信息输出到控制台
-            numberpic = random.randint(23425, 67311)    #等待页面刷新
-            wd.save_screenshot('result' + str(numberpic) + '.png') #若网页变化自动截图保存，以时间命名
-            print(time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime())) #若网页变化自动获取时间输出到控制台
+        element2 = wd.find_element(By.TAG_NAME, 'body').text
+        if ('无查询结果' not in element2):
+            print(element2)
+            print(time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime()))
+            print("======可能查到成绩信息，并将截图同时保存在本文件夹下======")
+            wd.save_screenshot('resultos' + str(numberpic) + '.png')
+            numberpic = random.randint(23425, 67311)
 
         i += 1
 
